@@ -1169,11 +1169,20 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.webp");
+			background-image: url("../../images/bg.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
+
+			/* Add the blur effect */
+			--blur-amount: 5px;
+
+			-webkit-filter: blur(var(--blur-amount));
+			-moz-filter: blur(var(--blur-amount));
+			-o-filter: blur(var(--blur-amount));
+			-ms-filter: blur(var(--blur-amount));
+			filter: blur(var(--blur-amount));
 		}
 
 		body.is-article-visible #bg:after {
@@ -1723,6 +1732,7 @@ input, select, textarea {
 
 			width: 300px;
 			min-width: 100px;
+			max-width: 300px;
 
 			margin: 15px;
 

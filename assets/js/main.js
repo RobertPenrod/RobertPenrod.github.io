@@ -14,7 +14,9 @@ initializeProjectDivs = function()
 			if(event.which == 1)
 			{
 				// Add class for mouseUp animations.
-				$(this).addClass('project-div-mouseUp');
+				if(!$(this).hasClass('no-mouseUp')) {
+					$(this).addClass('project-div-mouseUp');
+				}
 			}
 		};
 	}
